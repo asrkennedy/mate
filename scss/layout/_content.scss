@@ -1,0 +1,668 @@
+body {
+	background-image: url(../img/mate_people.jpg);
+	@include background-image;
+	background-attachment: fixed;
+}
+
+
+header {
+	background-image: url(../img/mate_people.jpg);
+	@include background-image;
+}
+
+main {
+	position: relative;
+	font-size: $base-font-size;
+	z-index: 1;
+	background: rgba(255,255,255,0.6);
+}
+
+.background-wrapper {
+	background-image: url(../img/background.jpg);
+	@include background-image;
+	position: relative;
+	max-width: 960px;
+	height: auto;
+	background-position: top center;
+	// z-index: -1;
+}
+
+.title-wrapper {
+	position: relative;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.title {
+	font-size: $title-font-mobile;
+	position: absolute;
+	bottom: 40px;
+	padding: $base-padding 2*$base-padding;
+	background: $mate-brown;
+	color: $white;
+	line-height: 100%;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+section {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.bombilla-wrapper {
+	width: 50.5%;
+	margin-top: 2*$base-margin;
+	.bombilla {
+		float: right;
+	}
+}
+
+.liquid-wrapper {
+	position: relative;
+	.liquid {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: -2px;
+		margin: 0 auto;
+		width: 33px;
+		height: 73%;
+		z-index: 10;
+	}
+}
+
+
+.mate-wrapper {
+	position: relative;
+	width: $full-width;
+	clear: both;
+	.mate-bottle {
+		margin: 0 auto;
+		position: absolute;
+		left: 0;
+		right: 0;
+		// top: -365px;
+		z-index: 20;
+	}
+}
+
+
+.about-wrapper {
+	position: relative;
+	z-index: 10;
+}
+
+
+.mountain-title {
+	background-image: url(../img/titlebackground.png);
+	@include background-image;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-position: left bottom;
+}
+
+.do-you-title {
+	margin-top: -40px;
+	border-top: 8px solid $mate-brown;
+	position: relative;
+	img {
+		width: 960px;
+	}
+}
+
+.intro-text {
+	max-width: 960px;
+	background: $white;
+    margin: 0 auto;
+    p {
+    	padding: 2*$base-padding;
+    	font-family: "Futura", sans-serif;
+    	font-size: $sub-font-size;
+    	color: $black-brown;
+    }
+}
+
+.about-title {
+	z-index: 20;
+	border-top: 8px solid $mate-brown;
+}
+
+#about {
+	padding: 150px 0 0;
+}
+
+#intro-wrapper,
+#story-wrapper {
+	position: relative;
+}
+
+#story-wrapper {
+	margin-top: -40px;
+}
+
+h1 {
+	text-align: center;
+	max-width: 960px;
+	margin: 0 auto;
+	color: $tan;
+	padding: 2*$base-padding;
+	font-size: $mobile-header-font-size;
+}
+
+
+.box-wrapper {
+	height: 2702px;
+	.about-box {
+		width: $full-width;
+		font-weight: 300;
+		font-size: 1em;
+		line-height: 1.75rem;
+		font-family: "Futura", sans-serif;
+		&:nth-child(2),
+		&:nth-child(2) p {
+			margin-top: 0;
+		}
+		img {
+			float: left;
+		}
+		&:nth-child(even),
+		&:nth-child(even) p,
+		&:nth-child(even) img {
+			float: right;
+		}
+		&:nth-child(odd) {
+			float: left;
+		}
+		p {
+			color: $darker-grey;
+			margin: 0 2*$base-margin;
+			widows: 3;
+		}
+		.last-mate {
+			color: $black;
+			margin: $base-margin 2*$base-margin;
+		}
+	}
+}
+
+.about-box:nth-child(2) {
+	p {
+		color: $white;
+	}
+}
+
+.about-box:nth-child(3) {
+	p {
+		color: $mate-brown;
+	}
+}
+
+.about-box:nth-child(4) {
+	p {
+		color: $darker-grey;
+	}
+}
+
+.about-box:nth-child(5) {
+	p {
+		color: $white;
+	}
+}
+
+.about-box:nth-child(6) {
+	p {
+		color: $darker-grey;
+	}
+}
+
+.about-box:nth-child(7) {
+	p {
+		color: $mate-brown;
+		margin-bottom: 0;
+	}
+}
+
+.about-box:nth-child(8) {
+	clear: both;
+}
+
+
+.charitea-image {
+	float: left;
+	margin-top: $base-margin;
+	img {
+		float: left;
+	}
+}
+
+// COMIC
+
+#comic-wrapper {
+	width: 100%;
+	text-align: center;
+	clear: both;
+	.comic-header-wrapper {
+		border-top: 8px solid $mate-brown;
+		position: relative;
+		img {
+			width: 960px;
+		}
+	}
+	.comic-body-wrapper {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: $base-padding $base-padding 0;
+		background-color: $white;
+	}
+	h1 {
+		color: $white;
+	}
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.social-icons {
+	background-color: $light-grey;
+	width: 100%;
+	margin: 0 auto;
+	margin-top: $base-margin;
+	a {
+		background-image: url(../img/twitterbrown.png);
+		@include background-image;
+		width: 25px;
+		height: 25px;
+		display: inline-block;
+		max-width: 25px;
+		background-position: left;
+		margin: 0.5*$base-margin;
+		vertical-align: bottom;
+		&:hover,
+		&:focus  {
+			background-position: right;
+		}
+	}
+	.facebook {
+		background-image: url(../img/facebookbrown.png);
+		background-position: left;
+		&:hover,
+		&:focus  {
+			background-position: right;
+		}
+	}
+}
+
+#comic-wrapper .social-icons {
+	clear: both;
+	max-width: 960px;
+	margin-top: 0;
+}
+
+.social-share.twit a {
+	background-image: url(../img/twitterwhite.png);
+	@include background-image;
+	background-position: left;
+	width: 1.3em;
+	height: 1.3em;
+	display: inline-block;
+	cursor: pointer;
+	margin-right: 0.5*$base-margin;
+	&:hover,
+	&:focus {
+		background-position: right;
+	}
+}
+
+.social-share.fbook a {
+	background-image: url(../img/facebookwhite.png);
+	@include background-image;
+	background-position: left;
+	width: 1.3em;
+	height: 1.3em;
+	display: inline-block;
+	cursor: pointer;
+	margin-right: 0.5*$base-margin;
+	&:hover,
+	&:focus  {
+		background-position: right;
+	}
+}
+
+.social-share.insta a {
+	background-image: url(../img/instagramwhite.png);
+	@include background-image;
+	background-position: left;
+	width: 1.3em;
+	height: 1.3em;
+	display: inline-block;
+	cursor: pointer;
+	&:hover,
+	&:focus  {
+		background-position: right;
+	}
+}
+
+
+.two-comics {
+	width: $full-width;
+	text-align: center;
+	margin: 0 auto;
+	float: left;
+	ul {
+		margin: 0;
+	}
+	&:last-of-type {
+		padding-bottom: $base-padding;
+	}
+}
+
+.comic-wrap {
+	text-align: left;
+	p,
+	img {
+		width: 80%;
+		max-width: 375px;
+		margin: 0 auto;
+	}
+	p:last-of-type {
+		font-size: $comic-font-size;
+		padding-bottom: 0.5*$base-padding;
+	}
+	.step {
+		font-size: $comic-header-font-size;
+	}
+}
+
+.cork {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	margin: 0 auto;
+	height: 100%;
+}
+
+// MATING FEED
+
+#mating-ritual-feed {
+	max-width: 960px;
+}
+
+.mating-wrapper {
+	width: 100%;
+	text-align: center;
+	.mating-header-wrapper {
+		border-top: 8px solid $mate-brown;
+		position: relative;
+		img {
+			width: 960px;
+		}
+	}
+	h1 {
+		color: white;
+	}
+	.mating-body-wrapper {
+		position: relative;
+		max-width: 960px;
+		margin: 0 auto;
+		background: url(../img/texture.png);
+		@include background-image;
+		color: $black-brown;
+	}
+	.mating-text,
+	.mating-box-wrapper {
+		color: $mate-brown;
+		padding: 0 2*$base-padding;
+		margin: 0 auto;
+		text-align: left;
+		font-family: "Futura", sans-serif;
+		padding-top: $base-padding;
+		p {
+			font-size: 0.9em;
+			margin: 0;
+		}
+	}
+}
+
+.mating-text {
+	a {
+		transition: all 0.3s ease-in-out;
+		color: $light-grey;
+		&:hover,
+		&:focus {
+			color: $darker-grey;
+		}
+	}
+}
+
+.mating-box-wrapper { 
+	padding: $base-padding;
+	p a {
+		margin: 0 auto $base-margin;
+		display: block;
+		text-align: center;
+		background: $white;
+		border: 2px solid $mate-brown;
+		max-width: 400px;
+		font-size: $sub-font-size;
+		color: $mate-brown;
+		transition: all 0.3s ease-in-out;
+		&:hover,
+		&:focus {
+			border: 4px solid $mate-brown;
+		}
+	}
+}
+
+#mating-ritual-feed .mating-box-wrapper .social-wrapper {
+	width: 100%;
+}
+
+.social-wrapper {
+	z-index: 2;
+	margin-bottom: $base-margin;
+	overflow: hidden;
+	a {
+	    text-align: right;
+	    padding: 0 0.5*$base-padding;
+	    &:last-child {
+			text-align: left;
+			padding: 0;
+		}
+	}
+	img {
+		width: 100%;
+	}
+	.social-img {
+		min-height: 0;
+		max-width: 23px;
+		margin: 0.5*$base-margin;
+	}
+	.social-icons {
+		display: none;
+		background: $white;
+		width: $half-width;
+		float: left;
+		margin-top: 0;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		&:last-child {
+			left: auto;
+			right: 0;
+		}
+		.facebook {
+			float: right;
+		}
+		.twitter {
+			background-image: url(../img/twitterbrown.png);
+			background-position: left;
+			float: left;
+			&:hover,
+			&:focus  {
+				background-position: right;
+			}
+		}
+	}
+}
+
+.media-wrapper,
+#instafeed {
+	margin: 0;
+}
+
+.media {
+	overflow: hidden;
+}
+
+#instafeed {
+	height: auto;
+	.insta-link {
+		width: auto;
+		padding: 0;
+		background-color: $black;
+		max-height: 245px;
+		overflow: hidden;
+	}
+}
+
+.padder {
+	border: 1px solid $white;
+	background: $mate-brown;
+}
+
+.buy-wrapper {
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+	padding: $base-padding;
+	background: $white;
+	border-top: 8px solid $mate-brown;
+	a {
+		border: 1px solid $mate-brown;
+		position: relative;
+		margin: 0 auto;
+		padding: 0.5*$base-padding 2*$base-padding;
+		text-align: center;
+		text-decoration: none;
+		color: $mate-brown;
+		display: block;
+		font-size: $footer-font-size;
+		margin: 0 auto;
+		max-width: 300px;
+		transition: all 0.3s ease-in-out;
+		&:hover,
+		&:focus  {
+			border: 5px solid $mate-brown;
+		}
+	}
+	a:before {
+	  content: " ";
+	  position: absolute;
+	  z-index: 0;
+	  top: 5px;
+	  left: 5px;
+	  right: 5px;
+	  bottom: 5px;
+	  border: 2px solid $mate-brown;
+
+	}
+	p {
+		display: inline-block;
+		color: $mate-brown-opacity;
+		text-align: center;
+		font-size: $comic-font-size;
+		padding-top: $base-padding;
+	}
+	img {
+		vertical-align: middle;
+	}
+}
+
+footer {
+	clear: both;
+	padding-bottom: 2*$base-padding;
+	background: $black-brown;
+	.footer-wrapper {
+		max-width: 960px;
+		padding: $base-padding;
+		margin: 0 auto;
+	}
+	h2 {
+		color: $tan;
+		font-size: $larger-base-font-size;
+		margin-bottom: 0.5*$base-margin;
+	}
+	li {
+		color: $white;
+		font-family: "Futura", sans-serif;
+		font-size: $sub-font-size;
+	}
+	.contact-wrapper,
+	.follow-wrapper, 
+	.cert-wrapper {
+		width: $half-width;
+		float: left;
+		color: $white;
+		font-family: "Futura", sans-serif;
+	}
+	.follow-wrapper {
+		float: right;
+		ul {
+			float: right;
+			h2 {
+				text-align: center;
+			}
+		}
+	}
+}
+
+.cert-wrapper {
+	text-align: right;
+	.certs {
+		display: inline-block;
+		clear: both;
+		height: 50px;
+	}
+	.award {
+		width: 100px;
+		margin-bottom: $base-margin;
+	}
+}
+
+.contact-wrapper {
+	li {
+		line-height: $sub-font-size;
+	}
+	a {
+		color: $light-grey;
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			color: $mate-brown;
+		}
+	}
+}
+
+.follow-wrapper {
+	li {
+		display: inline-block;
+		margin: 0;
+		&:last-child {
+			margin-right: 0;
+		}
+		img {
+			width: 60%;
+			max-width: 45px;
+		}
+	}
+}
+
+

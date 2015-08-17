@@ -1,0 +1,260 @@
+@import "foundation";
+@import "main";
+
+@media #{$small-only} { 
+	header {
+		background-attachment: scroll;
+	}
+}
+
+@media only screen and (max-width: 960px) {
+	.bombilla,
+	.liquid,
+	.mate-wrapper {
+		display: none;
+	}
+} 
+
+@media only screen and (min-width: 600px) {
+
+	header {
+		background-attachment: fixed;
+	}
+
+	.two-comics {
+		width: 50%;
+		float: left;
+		display: inline-block;
+		vertical-align: top;
+		padding-bottom: $base-padding;
+	}
+
+	.comic-wrap {
+		width: 50%;
+		float: left;
+		img {
+			width: auto;
+			display: inline-block;
+		}
+		p {
+			max-width: 219px;
+			width: auto;
+			margin: 0 auto;
+			font-size: $comic-font-size;
+		}
+	}
+
+
+	#mating-ritual-feed .mating-box-wrapper .social-wrapper {
+		width: $half-width;
+	}
+
+}
+
+
+@media #{$medium-up} { 
+
+	h1 {
+		text-align: left;
+		font-size: $main-header-font-size;
+	}
+
+	.title {
+		font-size: $title-font-mobile;
+		right: auto;
+		text-align: left;
+	}
+
+	.intro-text p,
+	.mating-text p {
+		width: $two-thirds;
+	}
+
+	.social-wrapper {
+		width: $one-third;
+		padding: 0
+		// &:first-child {
+		// 	padding-left: 0;
+	 // 	}		
+	 // 	&:last-child {
+		// 	margin-right: 0;
+		// 	padding-right: 0;
+		// }
+	}
+
+	.padder {
+		margin-right: 0.5*$base-margin;
+	}
+
+	.box-wrapper {
+		.about-box {
+			position: relative;
+			p {
+				width: 50%;
+				clear: both;
+			}
+			&:nth-child(even) p {
+				left: auto;
+			}
+			.last-mate {
+				color: $black;
+			}
+		}
+	}	
+
+	.image-wrapper {
+		clear: both;
+	}
+
+	// .about-box:nth-child(4) {
+	// 	p {
+	// 		top: -320px;
+	// 	}
+	// 	.image-wrapper {
+	// 		position: absolute;
+	// 		right: 0;
+	// 		top: -100px;
+	// 	}
+	// }
+
+	// .charitea-image {
+	// 	// Had to do this as the image was slanted
+	// 	margin-top: -285px;
+	// }
+
+	.buy-wrapper {
+		padding: 4*$base-padding;
+		a {
+			font-size: $button-font-size;
+			max-width: 600px;
+		}
+		p {
+			font-size: 1rem;
+			max-width: 180px;
+		}
+	}
+
+	.follow-wrapper {
+		img {
+			width: auto;
+		}
+	}
+
+	.padder {
+		position: relative;
+	}
+
+	.social-share.twit a,
+	.social-share.fbook a,
+	.social-share.insta a {
+		width: 2.8em;
+		height: 2.8em;
+	}
+
+	.contact-wrapper {
+		width: 40%;
+		max-width: 40%;
+	}
+
+	.follow-wrapper {
+		width: 65%;
+	}
+
+	.cert-wrapper {
+		float: left;
+		clear: none;
+		text-align: center;
+		h2 {
+			text-align: center;
+		}
+	}
+
+	footer {
+		.contact-wrapper,
+		.follow-wrapper, 
+		.cert-wrapper {
+			width: $one-third;
+		}
+		.follow-wrapper {
+			float: left;
+		}
+	}
+
+
+}
+
+@media only screen and (max-width: 850px) {
+	.buy-wrapper {
+		p {
+			text-align: center;
+			position: static;
+			width: auto;
+		}
+	}
+  
+}
+
+@media only screen and (min-width: 850px) {
+	#mating-ritual-feed .mating-box-wrapper .social-wrapper {
+		width: $one-third;
+	}
+
+		.social-wrapper:last-child {
+				.padder {
+			margin-right: 0;
+		}
+	}
+  
+}
+
+
+@media only screen and (min-width: 960px) {
+	.box-wrapper {
+		margin-top: 50px;
+		min-height: 150px;
+		.about-box {
+			position: relative;
+			p {
+				font-size: 0.9em;
+				position: absolute;
+				top: -240px;
+				left: 40px;
+				margin: 0;
+				width: 30%;
+				clear: both;
+			}
+			&:nth-child(2) p,
+			&:nth-child(2) .image-wrapper {
+				margin-top: 2*$base-margin;
+			}
+			&:nth-child(even) p {
+				right: 40px;
+				left: auto;
+			}
+			.last-mate {
+				color: $black;
+				top: 40px;
+				margin-top: 0;
+			}
+		}
+	}	
+
+	.image-wrapper {
+		clear: both;
+	}
+
+	.about-box:nth-child(6) {
+		p {
+			color: $white;
+		}
+	}
+}		
+
+@media #{$large-up} {
+
+}
+
+@media #{$xlarge-up} {
+
+	
+}
