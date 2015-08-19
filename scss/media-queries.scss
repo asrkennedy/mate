@@ -106,22 +106,6 @@
 		clear: both;
 	}
 
-	// .about-box:nth-child(4) {
-	// 	p {
-	// 		top: -320px;
-	// 	}
-	// 	.image-wrapper {
-	// 		position: absolute;
-	// 		right: 0;
-	// 		top: -100px;
-	// 	}
-	// }
-
-	// .charitea-image {
-	// 	// Had to do this as the image was slanted
-	// 	margin-top: -285px;
-	// }
-
 	.buy-wrapper {
 		padding: 4*$base-padding;
 		a {
@@ -211,6 +195,7 @@
 @media only screen and (min-width: 960px) {
 	.box-wrapper {
 		margin-top: 50px;
+		margin-bottom: 0;
 		min-height: 150px;
 		.about-box {
 			position: relative;
@@ -233,7 +218,7 @@
 			}
 			.last-mate {
 				color: $black;
-				top: 40px;
+				top: 0;
 				margin-top: 0;
 			}
 		}
@@ -243,9 +228,15 @@
 		clear: both;
 	}
 
-	.about-box:nth-child(6) {
+	.about-box:nth-child(4) {
 		p {
-			color: $white;
+			top: -250px;
+		}
+	}
+
+	.about-box:nth-child(7) {
+		p {
+			top: -420px;
 		}
 	}
 }		

@@ -1,5 +1,11 @@
 var tweetWrapper = '#twitter-feed .social-wrapper .padder';
 
+// Constructing wrappers and links for social icons sharing
+var facebookShare1 = "<div class='social-icons'><a  class='facebook' href='https://www.facebook.com/sharer/sharer.php?u="
+var facebookShare2 = "' onclick='window.open(this.href);return false;''></a></div>"
+var twitterShare1 ="<div class='social-icons'><a class='twitter' href='https://twitter.com/share?url="
+var twitterShare2 = "&via=lemonaiduk&hashtags=matingritual' onclick='window.open(this.href);return false;'></a></div>"
+
 function animate(element) {
   new AnimOnScroll( document.getElementById(element), {
       minDuration : 0.4,
@@ -33,8 +39,8 @@ function runInstGrid() {
 // INSTAFEED for Instagram feed
 var feed = new Instafeed({
   get: 'user',
-  userId: 285374024,
-  accessToken: "285374024.467ede5.eaa3be388bcc4336adbbefb3383145fd",
+  userId: 2138550272,
+  accessToken: "2138550272.467ede5.1d1b99f4f2d34265ae1a35e7c217831e",
   filter: function(image) {
     return image.tags.indexOf('matingritual') >= 0;
   },
@@ -101,21 +107,23 @@ var twitBox = {
         }
       })
       // then add in a placeholder box for each missing one
-      $(".media-wrapper").append("<li class='social-wrapper'><div class='padder'><div class='media'><a class='retweeter' href='https://twitter.com/home?status=http://placehold.it/300x300%20%23matingritual%20%40lemonaiduk'></a><a href='http://placehold.it/300x300'><img src='http://placehold.it/300x300'></a></div></div></li>")
+      $(".media-wrapper").append("<li class='social-wrapper'><div class='padder'><div class='media placer'><img src='img/mate1.jpg'></div></li>")
       if ($(tweetWrapper).length < 3) {
-        $(".media-wrapper").append("<li class='social-wrapper'><div class='padder'><div class='media'><a class='retweeter' href='https://twitter.com/home?status=http://placehold.it/300x300%20%23matingritual%20%40lemonaiduk'></a><a href='http://placehold.it/300x300'><img src='http://placehold.it/300x300'></a></div></div></li>")
+        $(".media-wrapper").append("<li class='social-wrapper'><div class='padder'><div class='media placer'><img src='img/mate2.jpg'></div></li>")
          if ($(tweetWrapper).length < 3) {
-          $(".media-wrapper").append("<li class='social-wrapper'><div class='padder'><div class='media'><a class='retweeter' href='https://twitter.com/home?status=http://placehold.it/300x300%20%23matingritual%20%40lemonaiduk'></a><a href='http://placehold.it/300x300'><img src='http://placehold.it/300x300'></a></div></div></li>")
+          $(".media-wrapper").append("<li class='social-wrapper'><div class='padder'><div class='media placer'><img src='img/mate3.jpg'></div></li>")
         }
       }
     }
   },
   share: function() {
     $('.media').each(function(i,e){
-      var imgUrl = $(this).find('img').attr('src');
-      var retweetUrl = $(this).find('.retweeter').attr('href');
-      $(this).parent('.padder').append(facebookShare1 + imgUrl + facebookShare2);
-      $(this).parent('.padder').append("<div class='social-icons'><a class='twitter' href='" + retweetUrl + "' onclick='window.open(this.href);return false;'></a></div>");
+      if ($(e).hasClass('placer') != true) {
+        var imgUrl = $(this).find('img').attr('src');
+        var retweetUrl = $(this).find('.retweeter').attr('href');
+        $(this).parent('.padder').append(facebookShare1 + imgUrl + facebookShare2);
+        $(this).parent('.padder').append("<div class='social-icons'><a class='twitter' href='" + retweetUrl + "' onclick='window.open(this.href);return false;'></a></div>");
+      }       
     })
     $('.retweeter').remove();
   }
@@ -145,7 +153,7 @@ function handleTweets(tweets) {
 
 // Calling widget for #matingritual on twitter
 var matingritual = {
-  "id": '629612694224683008',
+  "id": '633279343653949441',
   "maxTweets": 20,
   "enableLinks": true,
   "showImages": true,
@@ -157,30 +165,8 @@ var matingritual = {
   "showRetweet": true
 };
 
-// notbeast_ = 629612694224683008
-// lemonaiduk = 629631602516230145
-
-// Constructing wrappers and links for social icons sharing
-var facebookShare1 = "<div class='social-icons'><a  class='facebook' href='https://www.facebook.com/sharer/sharer.php?u="
-var facebookShare2 = "' onclick='window.open(this.href);return false;''></a></div>"
-var twitterShare1 ="<div class='social-icons'><a class='twitter' href='https://twitter.com/share?url="
-var twitterShare2 = "&via=lemonaiduk&hashtags=matingritual' onclick='window.open(this.href);return false;'></a></div>"
-
 // runs call for twitter widget
 twitterFetcher.fetch(matingritual);
-
-// DELETE BEFORE DEPLOYING!
-
-// andrea's tokens
-// userId: 285374024
-// accessToken: "285374024.467ede5.eaa3be388bcc4336adbbefb3383145fd"
-
-// lemonaid tokens
-// userId: 2134950278,
-//   accessToken: "2134950278.467ede5.af38ae4dacda43faa74652c63bdc6ec6",
-
-
-
 
 
 $(document).ready(function(){
